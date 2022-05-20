@@ -50,7 +50,7 @@ exports.updateUser = async (req, res, next) => {
       validation.value
     );
     if (updateUser) {
-      response.successRes(res, UPDATE_supplier_SUCCESS, updateUser);
+      response.successRes(res, UPDATE_USER_SUCCESS, updateUser);
     } else {
       response.badRequest(res, "User not found", validation.value);
     }

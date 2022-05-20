@@ -21,11 +21,10 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password,
     permissions: {
-      GET: ["/api/item/all", "/register"],
-      POST: ["/api/item"],
-      PUT: ["/api/item"],
-      DELETE: ["/api/item"],
-      GET_ALL: true,
+      GET: ["/api/user/all", "/register"],
+      POST: ["/api/user"],
+      PUT: ["/api/user"],
+      DELETE: ["/api/user"],
     },
   };
   const savedUser = await userService.addUser(user);
