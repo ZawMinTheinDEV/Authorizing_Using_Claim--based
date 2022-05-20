@@ -8,7 +8,6 @@ exports.addToken = async (token) => {
 //don't return if u don't use the deleted token
 exports.removeToken = async (id) => {
   const doc = await Token.findByIdAndRemove(id);
-  console.log("Deleted item is : " + doc);
 };
 //use shorthand
 exports.deleteTokenbyUserId = async (user_id) => {
@@ -17,7 +16,6 @@ exports.deleteTokenbyUserId = async (user_id) => {
 
 exports.deleteTokenbyToken = async (token) => {
   await Token.findOneAndDelete({ token });
-  console.log("Deleted item is : " + doc);
 };
 exports.getTokenbyToken = async (token) => {
   await Token.findOne({ token });
